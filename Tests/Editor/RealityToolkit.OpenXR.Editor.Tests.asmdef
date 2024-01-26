@@ -1,9 +1,9 @@
 {
-    "name": "RealityToolkit.UPMTEMPLATE.Editor.Tests",
+    "name": "RealityToolkit.OpenXR.Editor.Tests",
     "references": [
         "UnityEngine.TestRunner",
         "UnityEditor.TestRunner",
-        "RealityToolkit.UPMTEMPLATE"
+        "RealityToolkit.OpenXR"
     ],
     "includePlatforms": [
         "Editor"

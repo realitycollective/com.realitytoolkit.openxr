@@ -1,6 +1,6 @@
 {
-    "name": "RealityToolkit.UPMTEMPLATE",
-    "rootNamespace": "RealityToolkit.UPMTEMPLATE",
+    "name": "RealityToolkit.OpenXR",
+    "rootNamespace": "RealityToolkit.OpenXR",
     "references": [
         "GUID:f3241d040533491e8a1e2714b27c3111",
         "GUID:13703f41b24bb904cb2305abe6317e3d",

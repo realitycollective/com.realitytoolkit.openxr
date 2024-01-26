@@ -1,7 +1,7 @@
 {
-  "name": "com.realitytoolkit.UPMTEMPLATE",
-  "displayName": "RealityToolkit.UPMTEMPLATE",
-  "description": "The UPMTEMPLATE framework of the Reality Toolkit by the Reality Collective",
+  "name": "com.realitytoolkit.openxr",
+  "displayName": "RealityToolkit.openxr",
+  "description": "The openxr framework of the Reality Toolkit by the Reality Collective",
   "keywords": [
     "VR",
     "AR",
@@ -12,12 +12,12 @@
   "unity": "2021.3",
   "homepage": "https://github.com/realitycollective",
   "bugs": {
-    "url": "https://github.com/realitycollective/com.realitytoolkit.UPMTEMPLATE/issues"
+    "url": "https://github.com/realitycollective/com.realitytoolkit.openxr/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/realitycollective/com.realitytoolkit.UPMTEMPLATE"
+    "url": "git+https://github.com/realitycollective/com.realitytoolkit.openxr"
   },
   "author": {
     "name": "Reality Collective",

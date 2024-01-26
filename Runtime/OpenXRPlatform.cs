@@ -7,16 +7,16 @@ using UnityEngine.XR;
 using XRTK.Definitions.Platforms;
 using XRTK.Interfaces;
 
-namespace RealityToolkit.UPMTEMPLATE
+namespace RealityToolkit.OpenXR
 {
     /// <summary>
-    /// Used by the toolkit to signal that a feature is available on the UPMTEMPLATE platform.
+    /// Used by the toolkit to signal that a feature is available on the OpenXR platform.
     /// </summary>
-    [System.Runtime.InteropServices.Guid("UPMTEMPLATEGUID")]
-    public class UPMTEMPLATEPlatform : BasePlatform
+    [System.Runtime.InteropServices.Guid("72c2e15b-d4ae-4e10-83bd-6e670b37efdd")]
+    public class OpenXRPlatform : BasePlatform
     {
-        private const string xrDisplaySubsystemDescriptorId = "UPMTEMPLATE Display";
-        private const string xrInputSubsystemDescriptorId = "UPMTEMPLATE Input";
+        private const string xrDisplaySubsystemDescriptorId = "OpenXR Display";
+        private const string xrInputSubsystemDescriptorId = "OpenXR Input";
 
         /// <inheritdoc />
         public override IMixedRealityPlatform[] PlatformOverrides { get; } =
@@ -28,7 +28,7 @@ namespace RealityToolkit.UPMTEMPLATE
 		Choose a path for Is Platform available at runtime
         /// <inheritdoc />
         public override bool IsAvailable =>
-            !Application.isEditor && UPMTEMPLATEApi.Version > NoVersion && UPMTEMPLATEApi.Initialized;		
+            !Application.isEditor && OpenXRApi.Version > NoVersion && OpenXRApi.Initialized;		
 */
         /// <inheritdoc />
         public override bool IsAvailable
