@@ -4,8 +4,6 @@
 using RealityCollective.ServiceFramework.Definitions;
 using RealityCollective.ServiceFramework.Editor.Packages;
 using RealityCollective.ServiceFramework.Services;
-using RealityToolkit.OpenXR.Definitions;
-using RealityToolkit.OpenXR.Interfaces;
 using System.Linq;
 using UnityEditor;
 
@@ -39,6 +37,7 @@ namespace RealityToolkit.OpenXR.Editor
         /// <inheritdoc/>
         public bool Install(ServiceConfiguration serviceConfiguration)
         {
+            /*
             if (!typeof(IOpenXRModule).IsAssignableFrom(serviceConfiguration.InstancedType.Type))
             {
                 // This module installer does not accept the configuration type.
@@ -76,7 +75,7 @@ namespace RealityToolkit.OpenXR.Editor
             {
                 UnityEngine.Debug.Log($"Skipped installing the {serviceConfiguration.InstancedType.Type.Name} to {OpenXRProfile.name}. Already installed.");
             }
-
+            */
             return true;
         }
     }

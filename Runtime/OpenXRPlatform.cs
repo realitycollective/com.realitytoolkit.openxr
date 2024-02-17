@@ -1,11 +1,11 @@
 // Copyright (c) Reality Collective. All rights reserved.
 // Licensed under the MIT License. See LICENSE in the project root for license information.
 
+using RealityCollective.ServiceFramework.Definitions.Platforms;
+using RealityCollective.ServiceFramework.Interfaces;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR;
-using XRTK.Definitions.Platforms;
-using XRTK.Interfaces;
 
 namespace RealityToolkit.OpenXR
 {
@@ -15,21 +15,13 @@ namespace RealityToolkit.OpenXR
     [System.Runtime.InteropServices.Guid("72c2e15b-d4ae-4e10-83bd-6e670b37efdd")]
     public class OpenXRPlatform : BasePlatform
     {
-        private const string xrDisplaySubsystemDescriptorId = "OpenXR Display";
-        private const string xrInputSubsystemDescriptorId = "OpenXR Input";
-
         /// <inheritdoc />
-        public override IMixedRealityPlatform[] PlatformOverrides { get; } =
+        public override IPlatform[] PlatformOverrides { get; } =
         {
-            //new AndroidPlatform()
-            //new WindowsStandalonePlatform()
+            new AndroidPlatform(),
+            new WindowsStandalonePlatform()
 		};
-/*		
-		Choose a path for Is Platform available at runtime
-        /// <inheritdoc />
-        public override bool IsAvailable =>
-            !Application.isEditor && OpenXRApi.Version > NoVersion && OpenXRApi.Initialized;		
-*/
+
         /// <inheritdoc />
         public override bool IsAvailable
         {
@@ -37,17 +29,7 @@ namespace RealityToolkit.OpenXR
             {
                 var displaySubsystems = new List<XRDisplaySubsystem>();
                 SubsystemManager.GetSubsystems(displaySubsystems);
-                var xrDisplaySubsystemDescriptorFound = false;
-
-                for (var i = 0; i < displaySubsystems.Count; i++)
-                {
-                    var displaySubsystem = displaySubsystems[i];
-                    if (displaySubsystem.SubsystemDescriptor.id.Equals(xrDisplaySubsystemDescriptorId) &&
-                        displaySubsystem.running)
-                    {
-                        xrDisplaySubsystemDescriptorFound = true;
-                    }
-                }
+                var xrDisplaySubsystemDescriptorFound = displaySubsystems.Count > 0;
 
                 // The XR Display Subsystem is not available / running,
                 // the platform doesn't seem to be available.
@@ -63,15 +45,14 @@ namespace RealityToolkit.OpenXR
                 for (var i = 0; i < inputSubsystems.Count; i++)
                 {
                     var inputSubsystem = inputSubsystems[i];
-                    if (inputSubsystem.SubsystemDescriptor.id.Equals(xrInputSubsystemDescriptorId) &&
-                        inputSubsystem.running)
+                    if (!xrInputSubsystemDescriptorFound)
                     {
-                        xrInputSubsystemDescriptorFound = true;
+                        xrInputSubsystemDescriptorFound = inputSubsystem.running;
                     }
                 }
 
-                // The XR Input Subsystem is not available / running,
-                // the platform doesn't seem to be available.
+                // The No XR Input Subsystem found / running,
+                // no platforms are available.
                 if (!xrInputSubsystemDescriptorFound)
                 {
                     return false;
