@@ -1,8 +1,8 @@
-# Reality Toolkit - openxr
+# Reality Toolkit - OpenXR
 
 ![com.realitytoolkit.openxr](https://github.com/realitycollective/realitycollective.logo/blob/main/RealityToolkit/RepoBanners/com.realitytoolkit.openxr.png?raw=true)
 
-The openxr module for the [Reality Toolkit](https://www.realitytoolkit.io/).
+The OpenXR module for the [Reality Toolkit](https://www.realitytoolkit.io/).
 
 [![openupm](https://img.shields.io/npm/v/com.realitytoolkit.openxr?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.realitytoolkit.openxr/) [![Discord](https://img.shields.io/discord/597064584980987924.svg?label=&logo=discord&logoColor=ffffff&color=7389D8&labelColor=6A7EC2)](https://discord.gg/hF7TtRCFmB)
 [![Publish main branch and increment version](https://github.com/realitycollective/com.realitytoolkit.openxr/actions/workflows/main-publish.yml/badge.svg)](https://github.com/realitycollective/com.realitytoolkit.openxr/actions/workflows/main-publish.yml)
