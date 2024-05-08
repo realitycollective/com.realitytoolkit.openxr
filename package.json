@@ -1,16 +1,19 @@
 {
   "name": "com.realitytoolkit.openxr",
   "displayName": "RealityToolkit.OpenXR",
-  "description": "The openxr framework of the Reality Toolkit by the Reality Collective",
+  "description": "The openxr framework of the Reality Toolkit by the Reality Collective.",
+  "version": "1.0.0-pre.0",
+  "documentationUrl": "https://realitytoolkit.io",
+  "changelogUrl": "https://github.com/realitycollective/com.realitytoolkit.openxr/releases",
+  "licensesUrl": "https://github.com/realitycollective/com.realitytoolkit.openxr/blob/main/LICENSE.md",
   "keywords": [
     "VR",
     "AR",
     "XR",
     "Mixed Reality"
   ],
-  "version": "1.0.0-pre.0",
-  "unity": "2021.3",
-  "homepage": "https://github.com/realitycollective",
+  "unity": "2022.3",
+  "homepage": "https://realitytoolkit.io",
   "bugs": {
     "url": "https://github.com/realitycollective/com.realitytoolkit.openxr/issues"
   },
@@ -24,8 +27,11 @@
     "email": "realitycollectivedev@gmail.com",
     "url": "https://github.com/realitycollective"
   },
+  "publishConfig": {
+    "registry": "https://package.openupm.com"
+  },
   "dependencies": {
-    "com.realitytoolkit.core": "1.0.0-pre.39",
+    "com.realitytoolkit.core": "1.0.0-pre.48",
     "com.unity.xr.openxr": "1.10.0"
   },
   "assets": [
