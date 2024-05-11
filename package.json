@@ -2,7 +2,7 @@
   "name": "com.realitytoolkit.openxr",
   "displayName": "RealityToolkit.OpenXR",
   "description": "The openxr framework of the Reality Toolkit by the Reality Collective.",
-  "version": "1.0.0-pre.2",
+  "version": "1.0.0-pre.3",
   "documentationUrl": "https://realitytoolkit.io",
   "changelogUrl": "https://github.com/realitycollective/com.realitytoolkit.openxr/releases",
   "licensesUrl": "https://github.com/realitycollective/com.realitytoolkit.openxr/blob/main/LICENSE.md",
