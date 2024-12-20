@@ -29,7 +29,7 @@ namespace RealityToolkit.OpenXR
                 for (var i = 0; i < displaySubsystems.Count; i++)
                 {
                     var displaySubsystem = displaySubsystems[i];
-                    if (displaySubsystem.SubsystemDescriptor.id.Equals(xrDisplaySubsystemDescriptorId) &&
+                    if (displaySubsystem.subsystemDescriptor.id.Equals(xrDisplaySubsystemDescriptorId) &&
                         displaySubsystem.running)
                     {
                         xrDisplaySubsystemDescriptorFound = true;
@@ -50,7 +50,7 @@ namespace RealityToolkit.OpenXR
                 for (var i = 0; i < inputSubsystems.Count; i++)
                 {
                     var inputSubsystem = inputSubsystems[i];
-                    if (inputSubsystem.SubsystemDescriptor.id.Equals(xrInputSubsystemDescriptorId) &&
+                    if (inputSubsystem.subsystemDescriptor.id.Equals(xrInputSubsystemDescriptorId) &&
                         inputSubsystem.running)
                     {
                         xrInputSubsystemDescriptorFound = true;

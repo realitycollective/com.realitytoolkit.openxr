@@ -6,16 +6,16 @@ using RealityCollective.ServiceFramework.Editor.Packages;
 using RealityCollective.Utilities.Editor;
 using RealityCollective.Utilities.Extensions;
 using RealityToolkit.Editor;
+using RealityToolkit.Editor.Settings;
 using System.IO;
 using UnityEditor;
-using UnityEngine;
 
 namespace RealityToolkit.OpenXR.Editor
 {
     [InitializeOnLoad]
     internal static class OpenXRPackageInstaller
     {
-        private static readonly string destinationPath = Application.dataPath + "/RealityToolkit.Generated/OpenXR";
+        private static readonly string destinationPath = Path.Combine(RealityToolkitEditorSettings.Instance.AssetImportPath, "OpenXR");
         private static readonly string sourcePath = Path.GetFullPath($"{PathFinderUtility.ResolvePath<IPathFinder>(typeof(OpenXRPackagePathFinder)).ForwardSlashes()}{Path.DirectorySeparatorChar}{"Assets~"}");
 
         static OpenXRPackageInstaller()
